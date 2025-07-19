@@ -15,7 +15,7 @@ export const About = () => {
                             </p>
                             <div className="flex items-center space-x-4">
                                 <a 
-                                    href="/resumes/RESUME_YVESREYBADAN.pdf"
+                                    href="/pf-frontend/resumes/RESUME_YVESREYBADAN.pdf"
                                     download
                                     className="px-6 py-3 bg-neutral-900 text-white rounded-full font-medium hover:bg-neutral-800 transition-all duration-300 inline-block text-center"
                                 >
