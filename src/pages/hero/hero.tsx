@@ -92,14 +92,12 @@ export default function Hero() {
               </a>
             </div>
             
-            <div className='p-3'>
-              <span className="text-sm text-neutral-500 mr-2 p-3">Connect with me</span>
-            </div>
             <div className={`flex items-center justify-center space-x-4 transition-all duration-1000 ease-out delay-1200 ${
               isLoaded 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
             }`}>
+              <span className="text-sm text-neutral-500 mr-2 p-3">Connect with me</span>
               {[
                 { Icon: Github, label: 'GitHub', href: '#' },
                 { Icon: Linkedin, label: 'LinkedIn', href: '#' },
