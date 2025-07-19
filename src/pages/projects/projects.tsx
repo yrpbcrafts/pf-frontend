@@ -1,45 +1,23 @@
-import { ArrowUpRight, Github, Linkedin, Twitter, User, Palette, Code, Zap } from 'lucide-react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { ArrowUpRight, Github, Code } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import typlyImg from '../../assets/images/typly.png';
 
 export default function Projects() {
-  const showProjects = 'N' as 'Y' | 'N';
+  const showProjects = 'Y' as 'Y' | 'N';
   const navigate = useNavigate();
 
   const handleNavigate = () => {
     navigate("/project/gallery");
-  }
+  };
+
   const featuredProjects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack modern e-commerce solution with real-time inventory and payment processing",
-      tech: ["React", "Node.js", "PostgreSQL"],
-      image: "from-blue-500 to-purple-600",
-      icon: <Code className="w-6 h-6" />
-    },
-    {
-      id: 2,
-      title: "Design System & UI Kit",
-      description: "Comprehensive design system with 100+ components for scalable product development",
-      tech: ["Figma", "React", "Storybook"],
-      image: "from-pink-500 to-rose-500",
-      icon: <Palette className="w-6 h-6" />
-    },
-    {
-      id: 3,
-      title: "Performance Analytics Dashboard",
-      description: "Real-time analytics platform processing millions of data points with interactive visualizations",
-      tech: ["Vue.js", "D3.js", "Python"],
-      image: "from-emerald-500 to-teal-600",
-      icon: <Zap className="w-6 h-6" />
-    },
-    {
-      id: 4,
-      title: "Mobile Banking App",
-      description: "Secure mobile banking solution with biometric authentication and seamless UX",
-      tech: ["React Native", "Firebase", "Stripe"],
-      image: "from-orange-500 to-amber-600",
-      icon: <User className="w-6 h-6" />
+      title: "Typly",
+      description: "A modern blog platform built with React, Vite, and Tailwind CSS. Includes post creation, image uploads, state management with Zustand, and smooth routing.",
+      tech: ["React", "Vite", "Tailwind CSS", "TypeScript", "Zustand"],
+      image: typlyImg,
+      icon: <Code className="w-6 h-6" />,
     }
   ];
 
@@ -65,7 +43,12 @@ export default function Projects() {
                     key={project.id}
                     className="group bg-white/80 backdrop-blur-sm border border-neutral-200/60 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-neutral-200/40 transition-all duration-500 hover:-translate-y-1"
                   >
-                    <div className={`aspect-video bg-gradient-to-br ${project.image} relative overflow-hidden`}>
+                    <div className="aspect-video relative overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                       <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-300"></div>
                       <div className="absolute top-4 left-4 p-2 bg-white/90 backdrop-blur-sm rounded-lg">
                         {project.icon}
@@ -90,7 +73,6 @@ export default function Projects() {
                         {project.description}
                       </p>
 
-                      {/* Tech Stack */}
                       <div className="flex flex-wrap gap-2 mb-6">
                         {project.tech.map((tech, index) => (
                           <span
@@ -101,27 +83,31 @@ export default function Projects() {
                           </span>
                         ))}
                       </div>
-
-                      {/* CTA Button */}
-                      <button className="flex items-center space-x-2 text-neutral-700 hover:text-neutral-900 font-medium transition-all duration-200 group-hover:transform group-hover:translate-x-1">
-                        <span>View case study</span>
-                        <ArrowUpRight className="w-4 h-4 group-hover:w-5 group-hover:h-5 transition-all duration-200" />
-                      </button>
+                        <a
+                          href="https://yrpbcrafts.github.io/typly/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center space-x-2 text-neutral-700 hover:text-neutral-900 font-medium transition-all duration-200 group"
+                        >
+                          <span>View Project</span>
+                          <ArrowUpRight className="w-4 h-4 group-hover:w-5 group-hover:h-5 transition-all duration-200" />
+                        </a>
                     </div>
                   </div>
                 ))}
               </div>
 
-              {/* View All Projects Button */}
               <div className="text-center">
-                <button onClick={handleNavigate} className="group inline-flex items-center space-x-3 px-8 py-4 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-all duration-300 hover:shadow-lg hover:shadow-neutral-300 hover:-translate-y-0.5">
+                <button
+                  onClick={handleNavigate}
+                  className="group inline-flex items-center space-x-3 px-8 py-4 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-all duration-300 hover:shadow-lg hover:shadow-neutral-300 hover:-translate-y-0.5"
+                >
                   <span className="font-medium">View All Projects</span>
                   <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 group-hover:scale-110 transition-transform duration-300" />
                 </button>
               </div>
             </>
           )}
-
         </div>
       </div>
     </section>

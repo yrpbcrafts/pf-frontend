@@ -27,7 +27,13 @@ export const Router = () => {
             </>
           }
         />
-        <Route path="project/gallery" element={<ProjectGallery />} />
+        <Route
+           path="project/gallery" element={
+            <>
+              <ProjectGallery />
+              <Contact />
+            </>
+           } />
       </Route>
     </Routes>
   );
