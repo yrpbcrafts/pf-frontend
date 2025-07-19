@@ -16,7 +16,7 @@ export const About = () => {
                             <div className="flex items-center space-x-4">
                                 <a 
                                     href="/pf-frontend/resumes/RESUME_YVESREYBADAN.pdf"
-                                    download
+                                    download="RESUME_YVESREYBADAN.pdf"
                                     className="px-6 py-3 bg-neutral-900 text-white rounded-full font-medium hover:bg-neutral-800 transition-all duration-300 inline-block text-center"
                                 >
                                     Download CV
