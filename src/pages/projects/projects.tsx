@@ -19,6 +19,7 @@ export default function Projects() {
       tech: ["React", "Vite", "Tailwind CSS", "TypeScript", "Zustand"],
       image: typlyImg,
       icon: <Code className="w-6 h-6" />,
+      liveDemo: "https://yrpbcrafts.github.io/typly/"
     },
     {
       id: 2,
@@ -27,6 +28,7 @@ export default function Projects() {
       tech: ["HTML", "CSS", "JavaScript"],
       image: horizontalTimeline,
       icon: <Code className="w-6 h-6" />,
+      liveDemo: "https://yrpbcrafts.github.io/horizontal-timeline/",
     }
   ];
 
@@ -93,7 +95,7 @@ export default function Projects() {
                         ))}
                       </div>
                         <a
-                          href="https://yrpbcrafts.github.io/typly/"
+                          href={project.liveDemo}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center space-x-2 text-neutral-700 hover:text-neutral-900 font-medium transition-all duration-200 group"
