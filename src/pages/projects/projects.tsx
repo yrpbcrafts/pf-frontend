@@ -1,6 +1,7 @@
 import { ArrowUpRight, Github, Code } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import typlyImg from '../../assets/images/typly.png';
+import horizontalTimeline from '../../assets/images/horizontal-timeline.png';
 
 export default function Projects() {
   const showProjects = 'Y' as 'Y' | 'N';
@@ -17,6 +18,14 @@ export default function Projects() {
       description: "A modern blog platform built with React, Vite, and Tailwind CSS. Includes post creation, image uploads, state management with Zustand, and smooth routing.",
       tech: ["React", "Vite", "Tailwind CSS", "TypeScript", "Zustand"],
       image: typlyImg,
+      icon: <Code className="w-6 h-6" />,
+    },
+    {
+      id: 2,
+      title: "Horizontal Timeline",
+      description: "A professional, interactive timeline component designed to showcase company milestones, achievements, and growth progression. Built with pure HTML, CSS, and JavaScript, this timeline provides a clean, corporate-friendly way to display business history and key accomplishments.",
+      tech: ["HTML", "CSS", "JavaScript"],
+      image: horizontalTimeline,
       icon: <Code className="w-6 h-6" />,
     }
   ];

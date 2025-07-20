@@ -4,6 +4,7 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import typlyImg from '../../assets/images/typly.png';
+import horizontalTimeline from '../../assets/images/horizontal-timeline.png';
 
 export const ProjectGallery = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -27,6 +28,22 @@ export const ProjectGallery = () => {
       featured: true,
       website: "https://yrpbcrafts.github.io/typly/",
       github: "https://github.com/yrpbcrafts/typly"
+    },
+    {
+      id: 2,
+      title: "Horizontal Timeline",
+      description: "A modern and professional timeline design built with HTML, CSS, AND JavaScript.",
+      detailedDescription:
+        "A professional, interactive timeline component designed to showcase company milestones, achievements, and growth progression. Built with pure HTML, CSS, and JavaScript, this timeline provides a clean, corporate-friendly way to display business history and key accomplishments.",
+      tech: ["HTML", "CSS", "JavaScript"],
+      category: "Web Development",
+      image: horizontalTimeline,
+      icon: <ShoppingCart className="w-6 h-6" />,
+      date: "2024",
+      status: "Completed",
+      featured: true,
+      website: "https://yrpbcrafts.github.io/horizontal-timeline/",
+      github: "https://github.com/yrpbcrafts/horizontal-timeline"
     },
   ];
 
